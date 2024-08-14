@@ -1,37 +1,55 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import { Colors } from "@/constants/Colors";
+import { AntDesign } from "@expo/vector-icons";
+import { Tabs } from "expo-router";
+import {} from "react-native";
 
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+const TabsLayout = () => {
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-          ),
+    <>
+      <Tabs
+        screenOptions={{
+          tabBarActiveTintColor: Colors.orange,
+          tabBarInactiveTintColor: Colors.gray.light,
+          tabBarStyle: {
+            backgroundColor: Colors.purple.light,
+            paddingVertical: 10,
+          },
         }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
-    </Tabs>
+      >
+        <Tabs.Screen
+          name="home"
+          options={{
+            title: "Início",
+            headerShown: false,
+            tabBarIcon: ({ color, size }) => (
+              <AntDesign name="home" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="profile"
+          options={{
+            title: "Perfil",
+            headerShown: false,
+            tabBarIcon: ({ color, size }) => (
+              <AntDesign name="user" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="checkin"
+          options={{
+            title: "Perfil",
+            headerShown: false,
+            tabBarIcon: ({ color, size }) => (
+              <AntDesign name="user" size={size} color={color} />
+            ),
+            tabBarButton: () => null,
+          }}
+        />
+      </Tabs>
+    </>
   );
-}
+};
+
+export default TabsLayout;
