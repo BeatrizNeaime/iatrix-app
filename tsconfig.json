@@ -13,8 +13,14 @@
     "expo-env.d.ts",
     "app/(auth)/sign-up.jsx",
     "app/(auth)/sign-in.jsx",
-    "app/(auth)/_layout.tsx",
+    "app/(auth)/_layout.jsx",
     "app/(tabs)/profile.jsx",
-    "app/(tabs)/home.jsx"
+    "app/(tabs)/home.jsx",
+    "components/ThemedView.jsx",
+    "components/ThemedText.jsx",
+    "components/ParallaxScrollView.jsx",
+    "components/ExternalLink.jsx",
+    "app/_layout.jsx",
+    "app/(tabs)/_layout.jsx"
   ]
 }

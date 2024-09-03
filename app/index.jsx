@@ -1,4 +1,11 @@
-import { Image, ScrollView, StatusBar, Text, View } from "react-native";
+import {
+  Image,
+  ScrollView,
+  StatusBar,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../assets/images/logo laranja.png";
 import note from "../assets/images/note.png";
@@ -40,6 +47,14 @@ export default function Index() {
             handleClick={() => router.push("/sign-in")}
             otherStyles={"mt-7"}
           />
+          <TouchableOpacity onPress={() => router.push("/sign-in")}>
+            <Text className="text-base font-pregular text-gray-100 mt-7 text-center items-center">
+              Já tem uma conta?{" "}
+              <Text className="text-base font-bold text-orange underline">
+                Faça login
+              </Text>
+            </Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>

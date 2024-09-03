@@ -1,12 +1,9 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
-
 export const Colors = {
   purple: {
     light: "#7443ac",
     dark: "#4e1f85",
+    lighter: "#9e83bb",
+    bar: "#eee9f3",
   },
   orange: "#fe9000",
   green: "#72a98f",
@@ -15,5 +12,6 @@ export const Colors = {
   gray: {
     light: "#f3f3f3",
     dark: "#00000080",
+    d9: "#d9d9d9",
   },
 };

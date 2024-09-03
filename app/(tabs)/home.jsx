@@ -1,19 +1,31 @@
-import { FlatList, Image, SafeAreaView, View } from "react-native";
-import logo from "../../assets/images/logo laranja.png";
+import { FlatList, SafeAreaView, Text, View } from "react-native";
 import HomeDemand from "./../../components/HomeDemand";
 import { data } from "./../../constants/data";
+import FormField from "@/components/FormField";
+import { useState } from "react";
 
 const Home = () => {
+  const [search, setSearch] = useState();
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+
   return (
-    <SafeAreaView className="bg-primary h-full">
-      <View className="w-full justify-start items-center h-full px-4 my-6">
-        <View className="items-start justify-start w-full mb-4">
-          <Image
-            source={logo}
-            className="w-[60px] h-[44.4px] mt-4"
-            resizeMode="contain"
+    <SafeAreaView className="bg-white h-full py-4">
+      <View className="bg-primary h-1/5 rounded-b-3xl w-full items-center justify-center">
+        <View className="items-start w-full px-4 gap-0">
+          <Text className="text-white font-bold shadow m-0 p-0 text-[32px]">
+            Pesquisar
+          </Text>
+          <FormField
+            value={search}
+            handleChangeText={(e) => handleChange(e)}
+            placeholder={"Pesquisar por nome"}
           />
         </View>
+      </View>
+      <View className="w-full h-full px-4 my-6">
         <FlatList
           data={data}
           renderItem={({ item }) => <HomeDemand demand={item} />}

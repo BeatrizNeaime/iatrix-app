@@ -3,7 +3,7 @@ import { ActivityIndicator, Text, TouchableOpacity } from "react-native";
 const Button = ({ label, handleClick, otherStyles, textStyles, isLoading }) => {
   return (
     <TouchableOpacity
-      className={`bg-orange rounded-xl min-h-[56px] w-full flex flex-row justify-center items-center ${otherStyles} ${
+      className={`bg-orange rounded-xl min-h-[48px] w-full flex flex-row justify-center items-center ${otherStyles} ${
         isLoading ? "opacity-50" : ""
       }`}
       onPress={handleClick}

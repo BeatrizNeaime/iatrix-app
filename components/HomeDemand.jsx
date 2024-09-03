@@ -1,47 +1,28 @@
-import { Colors } from "@/constants/Colors";
-import { FontAwesome, FontAwesome5 } from "@expo/vector-icons";
-import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
+import { router } from "expo-router";
 
 const HomeDemand = ({ demand }) => {
   return (
-    <View className="w-full bg-white rounded-2xl px-2 pb-4 pt-2 gap-2 mt-2">
-      <View className="flex-row justify-between p-0 m-0">
-        <Text className="text-xl font-bold">{demand.vehicleTag}</Text>
-        <Text className="text-base text-gray-500">{demand.clientName}</Text>
+    <TouchableOpacity
+      className="w-full bg-white rounded-2xl border-primary border shadow-xl h-[110px] px-2 pb-4 pt-2 gap-2 m-0 mt-2"
+      onPress={() => router.push(`/(tabs)/checkin`)}
+    >
+      <View className="flex-row justify-between px-2 w-100 shadow-xl ">
+        <View className="relative bg-gray-200 rounded-lg w-1/2 items-center justify-center h-full">
+          <View className="bg-primary rounded-t-lg h-3 w-full absolute top-0"></View>
+          <Text className="text-2xl font-extrabold">{demand.vehicleTag}</Text>
+        </View>
+
+        <View className="items-end w-1/2">
+          <Text className="text-base font-bold shadow">
+            {demand.clientName}
+          </Text>
+          <Text className="text-xs font-bold shadow text-primary">
+            {demand.clientPhone}
+          </Text>
+        </View>
       </View>
-      <View className="flex-row gap-2 w-full justify-between px-4">
-        <Link href={"/(tabs)/checkin"}>
-          <FontAwesome
-            name="dollar"
-            size={22}
-            color={demand.os ? Colors.green : Colors.gray.dark}
-          />
-        </Link>
-        <Link href={"/(tabs)/checkin"}>
-          <FontAwesome5
-            name="car"
-            size={24}
-            color={demand.checkin ? Colors.green : Colors.gray.dark}
-          />
-        </Link>
-        <FontAwesome5
-          name="wrench"
-          size={24}
-          color={demand.checkup ? Colors.green : Colors.gray.dark}
-        />
-        <FontAwesome5
-          name="sign-out-alt"
-          size={24}
-          color={demand.checkout ? Colors.green : Colors.gray.dark}
-        />
-        <FontAwesome5
-          name="list"
-          size={24}
-          color={demand.tecDelivery ? Colors.green : Colors.gray.dark}
-        />
-      </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

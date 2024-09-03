@@ -1,18 +1,19 @@
 import { Colors } from "@/constants/Colors";
-import { AntDesign } from "@expo/vector-icons";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { Tabs } from "expo-router";
-import {} from "react-native";
 
 const TabsLayout = () => {
   return (
     <>
       <Tabs
         screenOptions={{
-          tabBarActiveTintColor: Colors.orange,
-          tabBarInactiveTintColor: Colors.gray.light,
+          tabBarInactiveTintColor: Colors.purple.lighter,
+          tabBarActiveTintColor: Colors.purple.dark,
+          tabBarShowLabel: false,
           tabBarStyle: {
-            backgroundColor: Colors.purple.light,
-            paddingVertical: 10,
+            backgroundColor: Colors.purple.bar,
+            borderTopColor: Colors.purple.dark,
+            borderTopWidth: 2,
           },
         }}
       >
@@ -22,7 +23,11 @@ const TabsLayout = () => {
             title: "Início",
             headerShown: false,
             tabBarIcon: ({ color, size }) => (
-              <AntDesign name="home" size={size} color={color} />
+              <MaterialCommunityIcons
+                name="home-variant-outline"
+                size={size}
+                color={color}
+              />
             ),
           }}
         />
@@ -32,14 +37,18 @@ const TabsLayout = () => {
             title: "Perfil",
             headerShown: false,
             tabBarIcon: ({ color, size }) => (
-              <AntDesign name="user" size={size} color={color} />
+              <MaterialCommunityIcons
+                name="storefront-outline"
+                size={size}
+                color={color}
+              />
             ),
           }}
         />
         <Tabs.Screen
           name="checkin"
           options={{
-            title: "Perfil",
+            title: "Checkin",
             headerShown: false,
             tabBarIcon: ({ color, size }) => (
               <AntDesign name="user" size={size} color={color} />

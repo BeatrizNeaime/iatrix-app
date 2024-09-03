@@ -21,7 +21,7 @@ const FormField = ({
       <Text className={`text-base text-gray-100`} style={{ fontWeight: 600 }}>
         {label} {required && <Text className="text-orange text-sm ">*</Text>}
       </Text>
-      <View className="w-full h-14 px-4 bg-gray-100 rounded-2xl border-2 border-primary focus:border-2 focus:border-orange flex flex-row items-center justify-center">
+      <View className="w-full h-12 px-4 bg-gray-100 rounded-full border-2 border-primary focus:border-2 focus:border-orange flex flex-row items-center justify-center">
         <TextInput
           className="flex-1 text-black text-base text-left h-full"
           value={value}
