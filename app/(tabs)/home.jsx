@@ -1,6 +1,6 @@
 import { FlatList, SafeAreaView, Text, View } from "react-native";
 import HomeDemand from "./../../components/HomeDemand";
-import { data } from "./../../constants/data";
+import { demandMock } from "../../mocks/demand";
 import FormField from "@/components/FormField";
 import { useState } from "react";
 
@@ -27,7 +27,7 @@ const Home = () => {
       </View>
       <View className="w-full h-full px-4 my-6">
         <FlatList
-          data={data}
+          data={demandMock}
           renderItem={({ item }) => <HomeDemand demand={item} />}
           keyExtractor={(item) => item.id}
         />

@@ -1,15 +1,24 @@
-export const data = [
+export const demandMock = [
   {
     id: 1,
     vehicleTag: "QQQ5283",
     clientName: "Beatriz Neaime",
-    clientPhone: "(35) 9558-4751",
+    clientPhone: "(35) 95558-4751",
     os: false,
     checkin: true,
     checkup: false,
     checkout: false,
     tecDelivery: false,
     date: "14/08/2024",
+    vehicle: {
+      id: 1,
+      model: "RENAULT/KWID INTENS 10MT",
+    },
+    demand: {
+      id: 1,
+      description:
+        "O sistema de arrefecimento do carro está apresentando falhas, causando superaquecimento do motor em situações de trânsito intenso ou em dias muito quentes",
+    },
   },
   {
     id: 2,
@@ -22,6 +31,11 @@ export const data = [
     checkout: false,
     tecDelivery: false,
     date: "14/08/2024",
+    demand: {
+      id: 2,
+      description:
+        "O sistema de freios do veículo está apresentando problemas, resultando em uma perda de eficiência na frenagem, especialmente em descidas íngremes ou durante frenagens bruscas",
+    },
   },
   {
     id: 3,

@@ -5,7 +5,7 @@ const HomeDemand = ({ demand }) => {
   return (
     <TouchableOpacity
       className="w-full bg-white rounded-2xl border-primary border shadow-xl h-[110px] px-2 pb-4 pt-2 gap-2 m-0 mt-2"
-      onPress={() => router.push(`/(tabs)/checkin`)}
+      onPress={() => router.push(`/(tabs)/checkin/${demand.id}`)}
     >
       <View className="flex-row justify-between px-2 w-100 shadow-xl ">
         <View className="relative bg-gray-200 rounded-lg w-1/2 items-center justify-center h-full">
