@@ -15,7 +15,7 @@ import { router } from "expo-router";
 export default function Index() {
   return (
     <SafeAreaView className="bg-primary h-full">
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       <ScrollView
         contentContainerStyle={{
           height: "100%",

@@ -1,5 +1,4 @@
 import { Stack } from "expo-router";
-import { StyleSheet } from "react-native";
 
 const RootLayout = () => {
   return (
@@ -12,12 +11,3 @@ const RootLayout = () => {
 };
 
 export default RootLayout;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    display: "flex",
-  },
-});

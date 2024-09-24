@@ -31,6 +31,10 @@ export const demandMock = [
     checkout: false,
     tecDelivery: false,
     date: "14/08/2024",
+    vehicle: {
+      id: 2,
+      model: "RENAULT/KWID INTENS 10MT",
+    },
     demand: {
       id: 2,
       description:
@@ -45,5 +49,32 @@ export const demandMock = [
     os: true,
     checkin: false,
     date: "03/09/2024",
+    vehicle: {
+      id: 3,
+      model: "I/FIAT CRONOS DRIVE",
+    },
+    demand: {
+      id: 2,
+      description:
+        "O sistema de freios do veículo está apresentando problemas, resultando em uma perda de eficiência na frenagem, especialmente em descidas íngremes ou durante frenagens bruscas",
+    },
+  },
+  {
+    id: 4,
+    vehicleTag: "QQQ5286",
+    clientName: "José Silva",
+    clientPhone: "(35) 9558-4751",
+    os: true,
+    checkin: false,
+    date: "03/09/2024",
+    vehicle: {
+      id: 4,
+      model: "I/FIAT CRONOS DRIVE",
+    },
+    demand: {
+      id: 2,
+      description:
+        "O sistema de freios do veículo está apresentando problemas, resultando em uma perda de eficiência na frenagem, especialmente em descidas íngremes ou durante frenagens bruscas",
+    },
   },
 ];

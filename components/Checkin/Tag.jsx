@@ -1,10 +1,14 @@
 import { View, Text, Image } from "react-native";
 import mercosul from "../../assets/images/mercosul.png";
 import brasil from "../../assets/images/brasil.png";
+import { BoxShadow } from "./../../constants/BoxShadow";
 
 const Tag = ({ value }) => {
   return (
-    <View className="w-2/3 bg-white h-[80px] m-0 mt-5 relative rounded-2xl items-center justify-center shadow-xl border-gray-400 border-[1px]">
+    <View
+      className="w-2/3 bg-white h-[80px] m-0 mt-5 relative rounded-2xl items-center justify-center shadow-xl border-gray-400 border-[1px]"
+      style={BoxShadow}
+    >
       <View className="bg-blue-600 w-full h-[28px] rounded-t-2xl flex-row items-center justify-between px-4">
         <Image source={mercosul} resizeMode="contain" />
         <Text className="text-white text-lg font-bold uppercase">Brasil</Text>

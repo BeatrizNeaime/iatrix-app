@@ -38,7 +38,7 @@ const TabsLayout = () => {
             headerShown: false,
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
-                name="storefront-outline"
+                name="account-circle-outline"
                 size={size}
                 color={color}
               />
@@ -47,6 +47,17 @@ const TabsLayout = () => {
         />
         <Tabs.Screen
           name="checkin"
+          options={{
+            title: "Checkin",
+            headerShown: false,
+            tabBarIcon: ({ color, size }) => (
+              <AntDesign name="user" size={size} color={color} />
+            ),
+            tabBarButton: () => null,
+          }}
+        />
+        <Tabs.Screen
+          name="loading"
           options={{
             title: "Checkin",
             headerShown: false,
